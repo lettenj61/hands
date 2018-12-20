@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hands & Eyes</title>
+</head>
+<body>
+  <script src="./core-js-bundle.3.0.0-beta.minified.js"></script>
+  <script src="../target/scala-2.12/hands-fastopt.js"></script>
+  <div id="app">
+    <h1>Event handler test</h1>
+    <div id="out"></div>
+    <p class="possible values">Ting ming</p>
+  </div>  
+  <script>
+    function dump (result) {
+      if (result) {
+        var out = document.getElementById('out');
+        out.innerHTML += ('<p><pre>' + result + '</pre></p>')
+      }
+    }
+
+    var eyes = new Eyes();
+    console.log(eyes.nodes);
+  </script>
+</body>
+</html>

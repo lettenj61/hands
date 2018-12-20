@@ -1,0 +1,13 @@
+{
+  "name": "hands",
+  "version": "0.1.0-SNAPSHOT",
+  "description": "Pserudo event listeners and selector API for dead browsers",
+  "main": "null",
+  "repository": "https://github.com/lettenj61/hands.git",
+  "author": "lettenj61",
+  "license": "Apache-2.0",
+  "private": true,
+  "devDependencies": {
+    "jsdom": "^13.1.0"
+  }
+}
