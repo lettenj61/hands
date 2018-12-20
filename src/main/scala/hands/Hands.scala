@@ -245,5 +245,19 @@ object Eyes {
 
 @JSExportTopLevel("Hands")
 class Hands extends js.Object {
+  private[this] var idCounter: Int = -1
+  val eyes: Eyes = new Eyes
+}
 
+object Hands {
+  type EventHandler[A] = js.Function1[js.UndefOr[dom.Event], A]
+  type HandlerMap = js.Dictionary[EventHandler[_]]
+
+  def nativeHandlerOf(el: dom.Element, `type`: String): js.UndefOr[EventHandler[_]] = {
+    js.defined {
+      el.asInstanceOf[js.Dynamic]
+        .selectDynamic(`type`)
+        .asInstanceOf[EventHandler[_]]
+    }
+  }
 }
